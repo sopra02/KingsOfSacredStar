@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="Building0" xml:space="preserve">
+    <value>Gebäude können platziert werden wenn diese in der HUD ausgewählt werden.</value>
+  </data>
+  <data name="Building1" xml:space="preserve">
+    <value>Drücken der "Q"-Taste rotiert diese vor dem Platzieren.</value>
+  </data>
+  <data name="Color0" xml:space="preserve">
+    <value>Ihre Einheiten sind blau,</value>
+  </data>
+  <data name="Color1" xml:space="preserve">
+    <value>die feindlichen sind rot,</value>
+  </data>
+  <data name="Color2" xml:space="preserve">
+    <value>allgemeine Einheiten sind grün.</value>
+  </data>
+  <data name="GoodLuck" xml:space="preserve">
+    <value>Wir wünschen Ihnen viel Spaß beim Testen.</value>
+  </data>
+  <data name="HaveFun" xml:space="preserve">
+    <value>Viel Spaß!</value>
+  </data>
+  <data name="Hero0" xml:space="preserve">
+    <value>Sie können den Helden wie eine Einheit auswählen, </value>
+  </data>
+  <data name="Hero1" xml:space="preserve">
+    <value>oder über das HUD über den "Held" Knopf.</value>
+  </data>
+  <data name="Hero2" xml:space="preserve">
+    <value>Er kann einen Rundumschlag, Pfeilregen oder einen Heil-Zauber ausführen,</value>
+  </data>
+  <data name="Hero3" xml:space="preserve">
+    <value>wenn er genügend Mana hat und die Fähigkeit im Fähigkeitenbaum erlernt wurde.</value>
+  </data>
+  <data name="HowStart0" xml:space="preserve">
+    <value>Um zu starten, navigieren Sie zu</value>
+  </data>
+  <data name="HowStart1" xml:space="preserve">
+    <value>"Einzelspieler" -&gt; "Neues Spiel"</value>
+  </data>
+  <data name="Mines0" xml:space="preserve">
+    <value>Um Rohstoffe zu bekommen,</value>
+  </data>
+  <data name="Mines1" xml:space="preserve">
+    <value>können sie mit Ihrem Helden Minen einnehmen.</value>
+  </data>
+  <data name="MiniMap0" xml:space="preserve">
+    <value>Um zu einem bestimmten Ort zu springen,</value>
+  </data>
+  <data name="MiniMap1" xml:space="preserve">
+    <value>können Sie auf der Mini-Map darauf klicken.</value>
+  </data>
+  <data name="Move0" xml:space="preserve">
+    <value>Durch einen Rechtsklick können Sie ihren Einheiten ein Ziel geben.</value>
+  </data>
+  <data name="Move1" xml:space="preserve">
+    <value>Einen Feind anzuklicken erteilt einen Angriffsbefehl.</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Nächster</value>
+  </data>
+  <data name="Placeholder" xml:space="preserve">
+    <value>Platzhalter</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Vorheriger</value>
+  </data>
+  <data name="Recruiting0" xml:space="preserve">
+    <value>Um Einheiten zu erschaffen, klicken Sie auf der HUD</value>
+  </data>
+  <data name="Recruiting1" xml:space="preserve">
+    <value>auf "Rekrutieren" und wählen Sie eine Einheit.</value>
+  </data>
+  <data name="SacredStar0" xml:space="preserve">
+    <value>Wenn Sie die Hälfte der Minen besitzen,</value>
+  </data>
+  <data name="SacredStar1" xml:space="preserve">
+    <value>können Sie den SacredStar einnehmen und einen Buff erhalten.</value>
+  </data>
+  <data name="Scrolling0" xml:space="preserve">
+    <value>Um die Kamera zu bewegen können sie "W", "A", "S" oder "D" nutzen,</value>
+  </data>
+  <data name="Scrolling1" xml:space="preserve">
+    <value>mit "Strg", der Leertaste oder durch scrollen kann die Höhe angepasst werden.</value>
+  </data>
+  <data name="Select0" xml:space="preserve">
+    <value>Sie können ihre Einheiten mit einem Linksklick auswählen,</value>
+  </data>
+  <data name="Select1" xml:space="preserve">
+    <value>mehrere davon, indem Sie ein Rechteck darüberziehen.</value>
+  </data>
+</root>

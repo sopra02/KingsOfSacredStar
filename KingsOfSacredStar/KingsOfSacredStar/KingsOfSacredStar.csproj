@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0BAC490-BDB8-404D-BE16-1AD3955A6726}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KingsOfSacredStar</RootNamespace>
+    <AssemblyName>KingsOfSacredStar</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GameLogic\HeroRespawnManager.cs" />
+    <Compile Include="GameLogic\PlayerConstants.cs" />
+    <Compile Include="GameLogic\Players.cs" />
+    <Compile Include="GameLogic\TileStates.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Screen\AAudioMenu.cs" />
+    <Compile Include="Screen\ABarButton.cs" />
+    <Compile Include="Screen\MainMenu\AMainMenuPage.cs" />
+    <Compile Include="Screen\MainMenu\EndGame.cs" />
+    <Compile Include="Screen\MainMenu\CreditsMenu.cs" />
+    <Compile Include="Screen\MainMenu\ExitButton.cs" />
+    <Compile Include="Screen\MainMenu\HelpMenu.cs" />
+    <Compile Include="Screen\MainMenu\InGameStatistics.cs" />
+    <Compile Include="Screen\MainMenu\LoadGameButton.cs" />
+    <Compile Include="Screen\MainMenu\MenuText.cs" />
+    <Compile Include="Properties\BuildMenuPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildMenuPanel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\CreditsMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditsMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\EndGame.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EndGame.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\EndGame.de-DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EndGame.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\GameHud.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameHud.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\HealthManaXPButton.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthManaXPButton.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\HelpMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\HeroMenuPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeroMenuPanel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\InGameMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InGameMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LoadSaveScreen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadSaveScreen.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\ModelManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelManager.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\RecruitMenuPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecruitMenuPanel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SkillingMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillingMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SkillName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillName.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Toolbox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Toolbox.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Hud\GameHudMiniMap.cs" />
+    <Compile Include="InputWrapper\BuildManagerWrapper.cs" />
+    <Compile Include="InputWrapper\GameStateWrapper.cs" />
+    <Compile Include="KI\AKi.cs" />
+    <Compile Include="KI\DummyKi.cs" />
+    <Compile Include="Screen\Hud\BuildButton.cs" />
+    <Compile Include="Screen\Hud\HeroPanel\ExperienceButton.cs" />
+    <Compile Include="Screen\Hud\GameHudPlaceHolder.cs" />
+    <Compile Include="Screen\Hud\HeroPanel\HealthButton.cs" />
+    <Compile Include="Screen\Hud\HeroPanel\HeroRespawnTimerButton.cs" />
+    <Compile Include="Screen\InGameMenu\LoadSaveScreen.cs" />
+    <Compile Include="Screen\Hud\HeroPanel\ManaButton.cs" />
+    <Compile Include="Screen\MouseOverlayScreen.cs" />
+    <Compile Include="Screen\SkillMenu\SkillButton.cs" />
+    <Compile Include="Screen\SkillMenu\SkillExecuteButton.cs" />
+    <Compile Include="Screen\SkillMenu\SkillLevelUpButton.cs" />
+    <Compile Include="Screen\SkillMenu\SkillingMenu.cs" />
+    <Compile Include="Screen\SkillMenu\SkillPointAvailableButton.cs" />
+    <Compile Include="Screen\Hud\SpawnButton.cs" />
+    <Compile Include="ToolBox.cs" />
+    <Compile Include="Statistic\Achievement\AchievementManager.cs" />
+    <Compile Include="Statistic\Achievement\Achievements.cs" />
+    <Compile Include="Statistic\Achievement\AchievementText.cs" />
+    <Compile Include="World\AttackModifiers.cs" />
+    <Compile Include="World\BoundingBoxManager.cs" />
+    <Compile Include="Screen\Hud\BuildMenuPanel.cs" />
+    <Compile Include="World\BuildManager.cs" />
+    <Compile Include="World\Camera.cs" />
+    <Compile Include="Screen\Hud\GameHud.cs" />
+    <Compile Include="Screen\Hud\GameHudButton.cs" />
+    <Compile Include="Screen\Hud\GameHudText.cs" />
+    <Compile Include="Screen\GameScreen.cs" />
+    <Compile Include="Screen\Hud\HeroPanel\HeroMenuPanel.cs" />
+    <Compile Include="Screen\InGameMenu\InGameAudioMenu.cs" />
+    <Compile Include="Screen\InGameMenu\InGameVideoMenu.cs" />
+    <Compile Include="Screen\InGameMenu\InGameMenu.cs" />
+    <Compile Include="InputWrapper\InputManager.cs" />
+    <Compile Include="InputWrapper\CameraWrapper.cs" />
+    <Compile Include="InputWrapper\ExitWrapper.cs" />
+    <Compile Include="InputWrapper\FileReaderWriter.cs" />
+    <Compile Include="InputWrapper\MouseInputWrapper.cs" />
+    <Compile Include="KossGame.cs" />
+    <Compile Include="Screen\IScreen.cs" />
+    <Compile Include="Screen\AButton.cs" />
+    <Compile Include="Screen\MainMenu\AchievementsMenu.cs" />
+    <Compile Include="Screen\ActionButton.cs" />
+    <Compile Include="Screen\AMenuPage.cs" />
+    <Compile Include="Screen\MainMenu\AudioMenu.cs" />
+    <Compile Include="Screen\Language.cs" />
+    <Compile Include="Screen\MainMenu\LoadGameMenu.cs" />
+    <Compile Include="Screen\MainMenu\MainMenu.cs" />
+    <Compile Include="Screen\MenuButton.cs" />
+    <Compile Include="Screen\MainMenu\OptionsMenu.cs" />
+    <Compile Include="Screen\ScreenSize.cs" />
+    <Compile Include="Screen\MainMenu\SinglePlayerMenu.cs" />
+    <Compile Include="Screen\MainMenu\VideoMenu.cs" />
+    <Compile Include="World\Costs.cs" />
+    <Compile Include="World\PlaneRenderer.cs" />
+    <Compile Include="World\StatusBarRenderer.cs" />
+    <Compile Include="World\LevelManager.cs" />
+    <Compile Include="World\LoadAndSaveManager.cs" />
+    <Compile Include="World\OrientedBoundingBox.cs" />
+    <Compile Include="World\BaseStats.cs" />
+    <Compile Include="World\RenderHelper.cs" />
+    <Compile Include="World\SpatialStructuredUnits.cs" />
+    <Compile Include="World\Unit\HitHelper.cs" />
+    <Compile Include="World\Unit\ICapturable.cs" />
+    <Compile Include="World\Unit\IDespawningUnit.cs" />
+    <Compile Include="World\Unit\Skills\ISkill.cs" />
+    <Compile Include="World\TakeOverManager.cs" />
+    <Compile Include="World\Unit\Buildings\Mine.cs" />
+    <Compile Include="World\ModelManager.cs" />
+    <Compile Include="Sound\MusicManager.cs" />
+    <Compile Include="Screen\DebugClasses\DebugScreen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AchievementName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AchievementName.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AchievementsMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AchievementsMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AchievementText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AchievementText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AudioMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AudioMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LoadGameMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadGameMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\MainMenuText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainMenuText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\OptionsMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OptionsMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SinglePlayerMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinglePlayerMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\StatisticsName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatisticsName.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\VideoMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Hud\RecruitMenuPanel.cs" />
+    <Compile Include="Screen\ScreenManager.cs" />
+    <Compile Include="Screen\Screen.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sound\SoundEffectManager.cs" />
+    <Compile Include="Sound\SoundManager.cs" />
+    <Compile Include="Statistic\Statistics.cs" />
+    <Compile Include="Statistic\StatisticsText.cs" />
+    <Compile Include="World\Trapeze.cs" />
+    <Compile Include="World\GameState.cs" />
+    <Compile Include="World\Unit\Buildings\ABuilding.cs" />
+    <Compile Include="World\Unit\Buildings\ADestroyableBuilding.cs" />
+    <Compile Include="World\Unit\Units\AMovableUnit.cs" />
+    <Compile Include="World\Unit\Units\Arrow.cs" />
+    <Compile Include="World\Unit\AUnit.cs" />
+    <Compile Include="World\Unit\Units\BatteringRam.cs" />
+    <Compile Include="World\Unit\Units\Bowman.cs" />
+    <Compile Include="World\Unit\Units\Cavalry.cs" />
+    <Compile Include="World\Unit\ATrackingUnit.cs" />
+    <Compile Include="World\Unit\Buildings\Gate.cs" />
+    <Compile Include="World\Unit\Units\Hero.cs" />
+    <Compile Include="World\Unit\IAttackingUnit.cs" />
+    <Compile Include="World\Unit\IDamageableUnit.cs" />
+    <Compile Include="World\Unit\IMovableUnit.cs" />
+    <Compile Include="World\Unit\IUnit.cs" />
+    <Compile Include="World\Unit\PathFinding\CollisionHandler.cs" />
+    <Compile Include="World\Unit\PathFinding\PathFindingZones.cs" />
+    <Compile Include="World\Unit\Resources.cs" />
+    <Compile Include="World\Unit\Buildings\Rock.cs" />
+    <Compile Include="World\Unit\Buildings\SacredStar.cs" />
+    <Compile Include="World\Unit\Skills\Skill1.cs" />
+    <Compile Include="World\Unit\Skills\Skill2.cs" />
+    <Compile Include="World\Unit\Skills\Skill3.cs" />
+    <Compile Include="World\Unit\Skills\SkillManager.cs" />
+    <Compile Include="World\Unit\Skills\Skills.cs" />
+    <Compile Include="World\Unit\Skills\ASkill.cs" />
+    <Compile Include="World\Unit\UnitTypes.cs" />
+    <Compile Include="World\Unit\Buildings\Village.cs" />
+    <Compile Include="World\Unit\Buildings\Wall.cs" />
+    <Compile Include="World\Unit\PathFinding\PathFinder.cs" />
+    <Compile Include="World\Unit\Units\Swordsman.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Priority Queue, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.4.2.0\lib\net45\Priority Queue.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\effects\HeroEffect.fx" />
+    <Content Include="Content\effects\InstancedStatusBar.fx" />
+    <Content Include="Content\effects\InstancedModel.fx" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <Content Include="KossSettings.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KossStatistics.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="map\map01.koss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Properties\EndGame.de-DE.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EndGame.de-DE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\AchievementName.de-DE.resx" />
+    <EmbeddedResource Include="Properties\AchievementName.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AchievementName.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AchievementsMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\AchievementsMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AchievementsMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AchievementText.de-DE.resx" />
+    <EmbeddedResource Include="Properties\AchievementText.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AchievementText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AudioMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\AudioMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AudioMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\BuildMenuPanel.de-DE.resx" />
+    <EmbeddedResource Include="Properties\BuildMenuPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildMenuPanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\CreditsMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\CreditsMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreditsMenu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\EndGame.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EndGame.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\GameHud.de-DE.resx" />
+    <EmbeddedResource Include="Properties\GameHud.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameHud.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\HealthManaXPButton.de-DE.resx" />
+    <EmbeddedResource Include="Properties\HealthManaXPButton.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HealthManaXPButton.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\HelpMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\HelpMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpMenu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\HeroMenuPanel.de-DE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\HeroMenuPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeroMenuPanel.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\InGameMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\InGameMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InGameMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LoadGameMenu.de-DE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LoadGameMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoadGameMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LoadSaveScreen.de-DE.resx" />
+    <EmbeddedResource Include="Properties\LoadSaveScreen.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoadSaveScreen.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MainMenuText.de-DE.resx" />
+    <EmbeddedResource Include="Properties\MainMenuText.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainMenuText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ModelManager.de-DE.resx" />
+    <EmbeddedResource Include="Properties\ModelManager.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModelManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\OptionsMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\OptionsMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\RecruitMenuPanel.de-DE.resx" />
+    <EmbeddedResource Include="Properties\RecruitMenuPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RecruitMenuPanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SinglePlayerMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\SinglePlayerMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SinglePlayerMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SkillingMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\SkillingMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillingMenu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SkillName.de-DE.resx" />
+    <EmbeddedResource Include="Properties\SkillName.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillName.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\StatisticsName.de-DE.resx" />
+    <EmbeddedResource Include="Properties\StatisticsName.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatisticsName.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Toolbox.de-DE.resx" />
+    <EmbeddedResource Include="Properties\Toolbox.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Toolbox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\VideoMenu.de-DE.resx" />
+    <EmbeddedResource Include="Properties\VideoMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VideoMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
